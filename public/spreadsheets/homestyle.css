@@ -1,12 +1,13 @@
 body {
     margin: 0;
     background: #c7dcf0;
+    
 }
 
 .navcontainer {
     width: 80%;
-
     margin: auto;
+    height: 100%;
 }
 
 header {
@@ -24,31 +25,38 @@ nav {
     
     float: right;
     width: 60%;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    height: 100%;
+    
     
 }
 
 .navtitle {
+    line-height: 1;
     float: left;
-    margin: 0;
+    margin: auto;
     padding: 1em;
     color: white;
     font-family: 'Open Sans', sans-serif;
 }
 
 nav ul {
-    
+    height: 100%;
     display: flex;
     justify-content: space-between;
     
 }
 nav ul li {
-    height: 100%;
+    height: fit-content;
     list-style-type: none;
     text-align: center;
-    
+    border-radius: 5px;
+    padding: 10px;
 }
+
+nav ul li:hover {
+    background-color: #2db6d1;
+}
+
 @font-face {
     font-family: 'HelsinkiImport';
     src:url('fonts\Helsinki.woff2')format('woff2');
@@ -80,33 +88,43 @@ nav li a {
     background:  #e2ecf6 ;
 }
 
-.trackform input {
+.trackform #query {
     border:0;
     outline:0;
     background-color: #e2ecf6;
     width: 25em;
 }
-.trackform input:focus {
+.trackform #query:focus {
     outline:none!important;
 }
 
-.trackform button {
+.searchbutton {
     border: 0;
     border-radius: 10px;
     background-color: rgb(166, 187, 255);
+    background-image: url("/static/images/search.png");
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
     width: 35px;
     height:35px;
 }
 
-.trackform button:active {
-    border: 0;
-    border-radius: 10px;
+.searchbutton:active {
     background-color: rgb(185, 201, 255);
-    width: 35px;
-    height:35px;
 }
 
-.trackform button img {
-    width: 25px;
-    height: 25px;
+.jumbotron {
+    height: 90vh;
+    width: 50vw;
+    background-color: #fcfcfc;
+    border-radius: 40px;
+    margin: 0 auto 2em auto;
+    
 }
+
+.sticky {
+    position: sticky;
+    top: 0;
+    width: 100%;
+  }

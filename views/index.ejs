@@ -7,12 +7,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet"> 
 <body class="summaryStyle">
-    <header >
+    <header id ="navbar">
         <div class="navcontainer">
             <h2 class ="navtitle">NutriTracker</h2>
             <nav>
                 <ul>
-                    <li><a href="index.html"> Meal Tracker</a></li>
+                    <li><a href="index.ejs"> Meal Tracker</a></li>
                     <li><a href = "#">Calorie Requirement</a></li>
                     <li><a href="#"> Edit Lists</a></li>
                 </ul>
@@ -21,11 +21,14 @@
     </header>
 
     <div class="searchbox">
-        <form action ="" method="get" class="trackform" >
-            <input type="text" placeholder = "Search Food" name="searchbar">
-            <button type="submit"><img src="/static/images/search.png"></button>
+        <form action ="/foodsearch" method="get" class="trackform" >
+            <input type="text" placeholder = "Search Food" name="searchbar" id="query">
+            <input type="submit" value="" class="searchbutton">
         </form>
-    </div>   
+    </div> 
+    <div class="jumbotron">
 
+    </div>
+<script src = "/static/nav.js"></script>
 </body>
 </html> 
