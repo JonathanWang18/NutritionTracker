@@ -6,19 +6,17 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet"> 
-<body class="summaryStyle">
-    <header id ="navbar">
-        <div class="navcontainer">
-            <h2 class ="navtitle">NutriTracker</h2>
-            <nav>
-                <ul>
-                    <li><a href="index"> Meal Tracker</a></li>
-                    <li><a href = "#">Calorie Requirement</a></li>
-                    <li><a href="#"> Edit Lists</a></li>
-                </ul>
-            </nav>
-        </div>
+<link rel="stylesheet" href="/static/spreadsheets/main.css"
+<body>
+    <header class="headerstyle d-flex justify-content-around">
+        <h1>NutriTracker</h1>
+        <ul class= "d-flex justify-content-start">
+            <li><a href="index"> Meal Tracker</a></li>
+            <li><a href = "#">Calorie Requirement</a></li>
+            <li><a href="#"> Edit Lists</a></li>
+        </ul>
     </header>
+
     <div class="searchbox">
         <form action ="/foodsearch" method="get" class="trackform" >
             <input type="text" placeholder = "Search Food" name="searchbar" id="query">
@@ -26,15 +24,13 @@
         </form>
     </div> 
     <div class="jumbotron">
-        <p>
+    
             {{#results}}
-                <b>{{label}}</b>
-                <br></br>
-                <b>Calories: {{cal}} Protein: {{protein}} Fat: {{fat}} Carbs:{{carb}}</b>
-                <br></br>
+                <b>{{label}} <br></b>
+                <p>Calories: {{cal}} Protein: {{protein}} Fat: {{fat}} Carbs:{{carb}}</p>
+                
 
             {{/results}}
-        </p>
     </div>
 <script src = "/static/nav.js"></script>
 </body>
