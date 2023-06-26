@@ -6,15 +6,18 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet"> 
-<link rel="stylesheet" href="/static/spreadsheets/main.css"
-<body>
-    <header class="headerstyle d-flex justify-content-around">
-        <h1>NutriTracker</h1>
-        <ul class= "d-flex justify-content-start">
-            <li><a href="index"> Meal Tracker</a></li>
-            <li><a href = "#">Calorie Requirement</a></li>
-            <li><a href="#"> Edit Lists</a></li>
-        </ul>
+<body class="primarybg">
+    <header id ="navbar">
+        <div class="navcontainer">
+            <h2 class ="navtitle quickfont">NutriTracker</h2>
+            <nav>
+                <ul>
+                    <li><a href="index"> Meal Tracker</a></li>
+                    <li><a href = "#">Calorie Requirement</a></li>
+                    <li><a href="#"> Edit Lists</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <div class="searchbox">
@@ -23,8 +26,8 @@
             <input type="submit" value="" class="searchbutton">
         </form>
     </div> 
-    <div class="jumbotron">
-    
+    <div class="card">
+        <p class="cardcontainer">
             {{#results}}
                 <b>{{label}} <br></b>
                 <p>Calories: {{cal}} Protein: {{protein}} Fat: {{fat}} Carbs:{{carb}}</p>
