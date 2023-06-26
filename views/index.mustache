@@ -19,6 +19,7 @@
             </nav>
         </div>
     </header>
+
     <div class="searchbox">
         <form action ="/foodsearch" method="get" class="trackform" >
             <input type="text" placeholder = "Search Food" name="searchbar" id="query">
@@ -28,13 +29,11 @@
     <div class="card">
         <p class="cardcontainer">
             {{#results}}
-                <b>{{label}}</b>
-                <br></br>
-                <b>Calories: {{cal}} Protein: {{protein}} Fat: {{fat}} Carbs:{{carb}}</b>
-                <br></br>
+                <b>{{label}} <br></b>
+                <p>Calories: {{cal}} Protein: {{protein}} Fat: {{fat}} Carbs:{{carb}}</p>
+                
 
             {{/results}}
-        </p>
     </div>
 <script src = "/static/nav.js"></script>
 </body>
