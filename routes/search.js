@@ -14,7 +14,7 @@ router.get('/', (req, reply) => {
           /*console.log(value.hints[1])
           console.log(value.hints[2])*/
           console.log(value.hints[0])
-          const results = value.hints.map((x)=>{return {label: x.food.label, brand: x.food.brand, cal: Math.round(x.food.nutrients.ENERC_KCAL), protein: Math.round(x.food.nutrients.PROCNT*100)/100, fat: Math.round(x.food.nutrients.FAT*100)/100, carb: Math.round(x.food.nutrients.CHOCDF*100)/100} }).slice(0,3)
+          results = value.hints.map((x)=>{return {label: x.food.label, brand: x.food.brand, cal: Math.round(x.food.nutrients.ENERC_KCAL), protein: Math.round(x.food.nutrients.PROCNT*100)/100, fat: Math.round(x.food.nutrients.FAT*100)/100, carb: Math.round(x.food.nutrients.CHOCDF*100)/100} }).slice(0,3)
           console.log(results);
           reply.render('index', {results: results});
 

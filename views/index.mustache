@@ -6,10 +6,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet"> 
-<body class="summaryStyle">
+<body class="primarybg">
     <header id ="navbar">
         <div class="navcontainer">
-            <h2 class ="navtitle">NutriTracker</h2>
+            <h2 class ="navtitle quickfont">NutriTracker</h2>
             <nav>
                 <ul>
                     <li><a href="index"> Meal Tracker</a></li>
@@ -25,8 +25,8 @@
             <input type="submit" value="" class="searchbutton">
         </form>
     </div> 
-    <div class="jumbotron">
-        <p>
+    <div class="card">
+        <p class="cardcontainer">
             {{#results}}
                 <b>{{label}}</b>
                 <br></br>
