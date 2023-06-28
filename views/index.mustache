@@ -3,11 +3,15 @@
 <meta charset="UTF-8">
 <title>Page Title</title>
 <link rel="stylesheet" href="/static/spreadsheets/homestyle.css">
+<link rel ="stylesheet" href="/static/spreadsheets/animation.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet"> 
+<script src = "/static/nav.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+<script src = "/static/controller/animation.js"></script>
 <body class="primarybg">
-    <header id ="navbar" class="navstyling">
+    <header class ="navstyle sticky">
         <div class="navcontainer">
             <h2 class ="navtitle quickfont">NutriTracker</h2>
             <nav>
@@ -19,8 +23,13 @@
             </nav>
         </div>
     </header>
-
-    <div class="searchbox">
+    <div id = "kitchen"> 
+        <div class = "contents">
+            <img class = "boardstyle" src = "/static/images/cuttingboardv2.png"/>
+            <img class = "choppedcarrots" src = "/static/images/choppedcarrots(1).png"/>
+        </div>
+    </div>
+    <div class="searchbox" id ="searchbarfood">
         <form action ="/foodsearch" method="get" class="trackform" >
             <input type="text" placeholder = "Search Food" name="searchbar" id="query">
             <input type="submit" value="" class="searchbutton">
@@ -35,6 +44,6 @@
 
             {{/results}}
     </div>
-<script src = "/static/nav.js"></script>
+
 </body>
 </html> 
