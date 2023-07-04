@@ -19,7 +19,6 @@ router.get('/', (req, reply) => {
           reply.render('index', {results: results});
 
         }) 
-    
   })
 
 module.exports = router
