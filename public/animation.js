@@ -7,12 +7,13 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 gsap.set('.choppedcarrots', {xPercent:-225, autoAlpha: 0})
+gsap.set('.toast', {xPercent: 250, autoAlpha: 1})
 
 var controller = new ScrollMagic.Controller();
 
 var bottomEnd = 0.35 * innerHeight;
 
-var tween = gsap.timeline({
+const tween = gsap.timeline({
     scrollTrigger: {
         trigger: "#kitchen",
         pin:true,
@@ -20,14 +21,26 @@ var tween = gsap.timeline({
         end: "+=1000",
         scrub:true,
       }
-})
-.to('.choppedcarrots', {
+}).add('start')
+
+tween.to('.choppedcarrots', {
     autoAlpha:1, 
     y:0, 
-    duration:2, 
+    duration:3, 
     stagger:1,
     xPercent: 5,
-})
+    yPercent: 50,
+}, 'start');
+
+tween.to('.toast', {
+    autoAlpha: 1,
+    duration: 7,
+    y:0, 
+    stagger:1,
+    xPercent: 15,
+    yPercent: -35,
+
+}, 'start');
 
 /*var scene = new ScrollMagic.Scene({
     triggerElement: '.choppedcarrots',
